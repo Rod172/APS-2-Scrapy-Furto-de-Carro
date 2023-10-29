@@ -1,3 +1,43 @@
+/* aps - 2 */
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+form {
+  margin: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+select {
+  padding: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+#download-link {
+  display: block;
+  text-align: center;
+  margin: 20px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+#download-link:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
 /* Start-stylelogin */
 :root {
   --primary-color: hsl(165, 70%, 50%);
