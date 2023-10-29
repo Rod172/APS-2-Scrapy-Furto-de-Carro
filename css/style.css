@@ -28,7 +28,9 @@
 
 body {
   font-family: Arial, sans-serif;
-  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
 }
 
 form {
@@ -70,6 +72,32 @@ select {
   align-items: center;
   text-align: center;
 
+}
+
+.carousel-container {
+  overflow: hidden;
+  align-items: center;
+  width: 100%; /* Largura do carrossel */
+}
+
+.carousel {
+  display: flex;
+  width: 1200px; /* Largura total do carrossel (300px * 4 imagens) */
+  transition: transform 0.5s;
+}
+
+.carousel img {
+  width: 100%; /* Largura de cada imagem */
+  height: auto;
+}
+
+/* Para a rolagem automática */
+@keyframes carouselScroll {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-300px); }
+  50% { transform: translateX(-600px); }
+  75% { transform: translateX(-900px); }
+  100% { transform: translateX(0); }
 }
 
 
