@@ -1,4 +1,6 @@
 import requests
+import pandas
+
 from bs4 import BeautifulSoup
 
 # URL da página a ser acessada
