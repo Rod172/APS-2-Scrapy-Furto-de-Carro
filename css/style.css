@@ -25,7 +25,11 @@
   75% { transform: translateX(-900px); }
   100% { transform: translateX(0); }
 }
-
+.sobre-nos{
+  text-align: center;
+  font-size: 18px;
+  align-items: center;
+}
 body {
   font-family: Arial, sans-serif;
   margin: 0;
