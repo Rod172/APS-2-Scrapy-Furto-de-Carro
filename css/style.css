@@ -11,41 +11,76 @@ body {
   height: 100vh;
 }
 
+.aps {
+  font-size: 24px;
+  text-align: center;
+}
+
 .container-select {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
+  text-align: center;
+}
+
+label {
+  font-weight: bold;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table td {
+  padding: 10px;
+  text-align: center;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+label[for="janeiro"],
+label[for="abril"],
+label[for="julho"],
+label[for="outubro"],
+label[for="fevereiro"],
+label[for="maio"],
+label[for="agosto"],
+label[for="novembro"],
+label[for="marco"],
+label[for="junho"],
+label[for="setembro"],
+label[for="dezembro"] {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label {
+  background-color: #e74c3c;
 }
 
 select {
   width: 100%;
-  padding: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   margin: 10px 0;
 }
 
 button {
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
+  background-color: #3498db;
   color: #fff;
   border: none;
+  border-radius: 5px;
+  padding: 10px 60px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #0056b3;
-}
-
-.aps {
-  text-align: center;
-  color: #000;
-  font-size: 52px;
-}
-
-.form-aps {
-  align-items: center;
-  text-align: center;
-
+  background-color: #e74c3c;
 }
 
 .carousel-container {
