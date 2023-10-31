@@ -1,8 +1,18 @@
 /* aps - 2 */
-.sobre-nos{
-  text-align: center;
-  font-size: 18px;
-  align-items: center;
+.sobre-nos {
+  margin: 20px;
+  padding: 20px;
+  border: 5px solid #000;
+  border-radius: 10px;
+}
+.dicas-RF {
+  color: #333;
+}
+p {
+  margin-bottom: 15px;
+}
+b {
+  font-weight: bold;
 }
 body {
   font-family: Arial, sans-serif;
