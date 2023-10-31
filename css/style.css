@@ -374,3 +374,19 @@ html {
 }
 
 /* End-stylelogin */
+
+
+.texto-imagem {
+  text-align: center;
+}
+
+.imagem-texto {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.text-pt {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px; /* Espaço entre a imagem e o texto */
+}
