@@ -3,6 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.edge.options import Options
 import pandas as pd
+from pathlib import Path
 import os
 import time
 
@@ -32,6 +33,7 @@ class FurtodeveiculoSpider(scrapy.Spider):
         # Lista de anos e meses
         anos = ["2022", "2021", "2020"]
         meses = ["12", "11", "10", "09", "08", "07", "06", "05", "04", "03", "02", "01"]
+        DOWNLOADS = Path.home() / 'Downloads'
 
         # Loop pelos anos e meses
         for ano in anos:
@@ -52,7 +54,7 @@ class FurtodeveiculoSpider(scrapy.Spider):
                 time.sleep(10)  # Esperar o download ser concluído (ajuste conforme necessário)
 
                 # Esperar o download ser concluído e renomear o arquivo XLS baixado
-                xls_filename = f'c:/Users/rodri/Downloads/DadosBO_{ano}_{mes}(FURTO DE VEÍCULOS).xls'
+                xls_filename = f'DOWNLOADS/DadosBO_{ano}_{mes}(FURTO DE VEÍCULOS).xls'
                 csv_filename = f"dados_{ano}_{mes}.csv"
 
                 # Aguarde o arquivo ser baixado completamente (ajuste conforme necessário)
