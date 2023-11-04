@@ -54,7 +54,7 @@ class FurtodeveiculoSpider(scrapy.Spider):
                 time.sleep(10)  # Esperar o download ser concluído (ajuste conforme necessário)
 
                 # Esperar o download ser concluído e renomear o arquivo XLS baixado
-                xls_filename = f'DOWNLOADS/DadosBO_{ano}_{mes}(FURTO DE VEÍCULOS).xls'
+                xls_filename = f'{DOWNLOADS}/DadosBO_{ano}_{mes}(FURTO DE VEÍCULOS).xls'
                 csv_filename = f"dados_{ano}_{mes}.csv"
 
                 # Aguarde o arquivo ser baixado completamente (ajuste conforme necessário)
