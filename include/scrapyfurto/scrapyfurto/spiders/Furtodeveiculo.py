@@ -90,5 +90,12 @@ class FurtodeveiculoSpider(scrapy.Spider):
         merge = pd.concat(tables)
         merge.to_csv(result, index=False)
 
+
+        # Limpar o arquivo csv após a conversão
+        for ano in anos:
+            for mes in meses:
+                csv_filename = f"dados_{ano}_{mes}.csv"
+                os.remove(csv_filename)
+
     def closed(self, reason):
         self.driver.quit()  # Fechar o navegador quando o spider é fechado
