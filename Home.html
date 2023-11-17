@@ -12,7 +12,7 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <title>Kings of Data</title>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"> </script>
   <link rel="icon" type="image/x-icon" href="Images/Favicon.png">
 </head>
 
@@ -72,13 +72,22 @@
     </div>
   </header>
   
-  <div class="carousel-container">
-    <div class="carousel">
-        <img src="images/car-robber-with.jpg" alt="Imagem 1">
-        <img src="images/car-robber-with.jpg" alt="Imagem 1">
-        <img src="images/car-robber-with.jpg" alt="Imagem 1">
-        <img src="images/car-robber-with.jpg" alt="Imagem 1">
-    </div>
+  <div class="slideshow-container">
+  <div class="mySlides">
+    <img  class="banner"  src="images/ladrao.jpg" alt="Banner 1">
+  </div>
+
+  <div class="mySlides">
+    <img  class="banner" src="images/ladrao-pe-cabra.jpg" alt="Banner 2">
+  </div>
+
+  <div class="mySlides">
+    <img  class="banner" src="images/ladrao-lanterna.jpg" alt="Banner 3">
+  </div>
+
+  <div class="mySlides">
+    <img class="banner" src="images/policia.jpg" alt="Banner 4">
+  </div>
 </div>
   <br>
 
@@ -120,77 +129,33 @@
   </div>
 </div><br><br>
 
-  <h1 class="aps">Selecione o Mês e o Ano</h1>
-  <div class="container-select">
-    <form action="seu_script_de_servidor_para_gerar_documento.php" method="post"><br>
-      <label for="mes" style="font-size: 32px;">Mês:</label><br>
-      <table class="table table-borderless">
-        <tr>
-          <td>
-            <input type="checkbox" id="janeiro" name="mes[]" value="Janeiro">
-            <label for="janeiro">Janeiro</label>
-          </td>
-          <td>
-            <input type="checkbox" id="abril" name="mes[]" value="Abril">
-            <label for="abril">Abril</label>
-          </td>
-          <td>
-            <input type="checkbox" id="julho" name="mes[]" value="Julho">
-            <label for="julho">Julho</label>
-          </td>
-          <td>
-            <input type="checkbox" id="outubro" name="mes[]" value="Outubro">
-            <label for="outubro">Outubro</label>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="checkbox" id="fevereiro" name="mes[]" value="Fevereiro">
-            <label for="fevereiro">Fevereiro</label>
-          </td>
-          <td>
-            <input type="checkbox" id="maio" name="mes[]" value="Maio">
-            <label for="maio">Maio</label>
-          </td>
-          <td>
-            <input type="checkbox" id="agosto" name="mes[]" value="Agosto">
-            <label for="agosto">Agosto</label>
-          </td>
-          <td>
-            <input type="checkbox" id="novembro" name="mes[]" value="Novembro">
-            <label for="novembro">Novembro</label>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="checkbox" id="marco" name="mes[]" value="Março">
-            <label for="marco">Março</label>
-          </td>
-          <td>
-            <input type="checkbox" id="junho" name="mes[]" value="Junho">
-            <label for="junho">Junho</label>
-          </td>
-          <td>
-            <input type="checkbox" id="setembro" name="mes[]" value="Setembro">
-            <label for="setembro">Setembro</label>
-          </td>
-          <td>
-            <input type="checkbox" id="dezembro" name="mes[]" value="Dezembro">
-            <label for="dezembro">Dezembro</label>
-            
-          </td>
-        </tr>
-      </table><br>
-      <label for="ano" style="font-size: 32px;">Ano:</label><br>
-      <select id="ano" name="ano">
-        <option value="2020">2020</option>
-        <option value="2021">2021</option>
-        <option value="2022">2022</option>
-        <!-- Adicione os anos desejados aqui -->
-      </select>
-    </form><br>
-    <button type="submit"><a href="#" style="text-decoration: none;color:#fff;">Baixar Documento</a></button>
-  </div><br>
+<div>
+  <h1 style="text-align: center;">Baixe Agora: Dados Incríveis de 2020, 2021 e 2022!</h1>
+  <p style="text-align: center;">Descubra insights valiosos, tendências marcantes e informações essenciais dos anos passados.<br> Não perca a oportunidade de acessar dados abrangentes que podem transformar sua perspectiva.<br> Clique no botão abaixo para iniciar o download instantâneo e explore as histórias por trás dos números!</p>
+</div>
+
+    <div class="container-dados">
+        <div class="box">
+            <h1>Dados de 2020</h1>
+            <p>Descubra as incríveis histórias por trás dos números de 2020!</p>
+            <a href="#" class="download-button-dados" onclick="downloadAll()" >📥 Baixar Dados</a>
+            <p id="download-status">Baixando...</p>
+        </div>
+
+        <div class="box">
+            <h1>Dados de 2021</h1>
+            <p>Descubra as incríveis histórias por trás dos números de 2021!</p>
+            <a href="#" class="download-button-dados" onclick="downloadAll2()">📥 Baixar Dados</a>
+            <p id="download-status">Baixando...</p>
+        </div>
+
+        <div class="box">
+            <h1>Dados de 2022</h1>
+            <p>Descubra as incríveis histórias por trás dos números de 2022!</p>
+            <a href="#" class="download-button-dados" onclick="downloadAll3()">📥 Baixar Dados</a>
+            <p id="download-status">Baixando...</p>
+        </div>
+    </div>
 
   <!-- Footer -->
   <footer class="text-center text-lg-start bg-dark text-white">
@@ -386,5 +351,231 @@
         checklist.innerHTML = listHTML;
     }
 </script>
+
+  <script>
+  var slideIndex = 0;
+
+  showSlides();
+
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 6000); // tempo da imagem
+  }
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+</script>
+<script>
+        function downloadFile() {
+            var downloadStatus = document.getElementById('download-status');
+            downloadStatus.style.display = 'block';
+
+            // Simula um tempo de download (pode ser substituído por uma chamada de API real)
+            setTimeout(function() {
+                downloadStatus.innerHTML = 'Download concluído!';
+            }, 3000); // Neste exemplo, definimos um tempo de 3 segundos para simular o download
+        }
+    </script>
+
+<!--<script>
+        $(document).ready(function () {
+            $("#link").click(function (e) {
+                e.preventDefault();
+                  
+                window.location.href 
+                    = "include/scrapyfurto/dados_2020_1.csv";
+            });
+        });
+    </script>-->
+<!--<script>
+function downloadFiles() {
+  // Lista de URLs dos arquivos
+  const fileUrls = [
+    'include/scrapyfurto/2020',
+    // Adicione mais URLs conforme necessário
+  ];
+
+  // Itera sobre a lista de URLs e cria links de download
+  fileUrls.forEach((url, index) => {
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `arquivo_${index + 1}.txt`; // Nome do arquivo de download
+    document.body.appendChild(link);
+    link.click();
+   // document.body.removeChild(link);
+  });
+}
+</script>-->
+<!--<script>
+        function downloadAll() {
+            var downloadStatus = document.getElementById('download-status');
+            downloadStatus.style.display = 'block';
+
+            // Adicione aqui os URLs dos arquivos que você deseja baixar
+            var fileUrls = [
+                'include/scrapyfurto/dados_2020_1.csv',
+                'include/scrapyfurto/dados_2020_2.csv',
+                'include/scrapyfurto/dados_2020_3.csv',
+                'include/scrapyfurto/dados_2020_4.csv',
+                'include/scrapyfurto/dados_2020_5.csv',
+                'include/scrapyfurto/dados_2020_6.csv',
+                'include/scrapyfurto/dados_2020_7.csv',
+                'include/scrapyfurto/dados_2020_8.csv',
+                'include/scrapyfurto/dados_2020_9.csv',
+                'include/scrapyfurto/dados_2020_10.csv',
+                'include/scrapyfurto/dados_2020_11.csv',
+                'include/scrapyfurto/dados_2020_12.csv',
+                'include/scrapyfurto/dados_2021_1.csv',
+                'include/scrapyfurto/dados_2021_2.csv',
+                'include/scrapyfurto/dados_2021_3.csv',
+                'include/scrapyfurto/dados_2021_4.csv',
+                'include/scrapyfurto/dados_2021_5.csv',
+                'include/scrapyfurto/dados_2021_6.csv',
+                'include/scrapyfurto/dados_2021_7.csv',
+                'include/scrapyfurto/dados_2021_8.csv',
+                'include/scrapyfurto/dados_2021_9.csv',
+                'include/scrapyfurto/dados_2021_10.csv',
+                'include/scrapyfurto/dados_2021_11.csv',
+                'include/scrapyfurto/dados_2021_12.csv',
+                'include/scrapyfurto/dados_2022_1.csv',
+                'include/scrapyfurto/dados_2022_2.csv',
+                'include/scrapyfurto/dados_2022_3.csv',
+                'include/scrapyfurto/dados_2022_4.csv',
+                'include/scrapyfurto/dados_2022_5.csv',
+                'include/scrapyfurto/dados_2022_6.csv',
+                'include/scrapyfurto/dados_2022_7.csv',
+                'include/scrapyfurto/dados_2022_8.csv',
+                'include/scrapyfurto/dados_2022_9.csv',
+                'include/scrapyfurto/dados_2022_10.csv',
+                'include/scrapyfurto/dados_2022_11.csv',
+                'include/scrapyfurto/dados_2022_12.csv'
+                // Adicione mais URLs conforme necessário
+            ];
+
+            // Simula o download de cada arquivo
+            fileUrls.forEach(function(url, index) {
+                setTimeout(function() {
+                    var link = document.createElement('a');
+                    link.href = url;
+                    link.download = 'arquivo_' + (index + 1) + '.txt';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }, index * 1000); // Simula um intervalo de 1 segundo entre cada download
+            });
+
+            // Simula o término do download após o tempo necessário
+            setTimeout(function() {
+                downloadStatus.innerHTML = 'Downloads concluídos!';
+            }, fileUrls.length * 1000);
+        }
+    </script>-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+    <script>
+        function downloadAll() {
+            var zip = new JSZip();
+
+            // Adicione aqui os conteúdos dos arquivos que você deseja baixar
+            var fileContents = [
+                { name: 'include/scrapyfurto/dados_2020_1.csv', content: 'Conteúdo do arquivo 1' },
+                { name: 'include/scrapyfurto/dados_2020_2.csv', content: 'Conteúdo do arquivo 2' },
+                { name: 'include/scrapyfurto/dados_2020_3.csv', content: 'Conteúdo do arquivo 3' },
+                { name: 'include/scrapyfurto/dados_2020_4.csv', content: 'Conteúdo do arquivo 4' },
+                { name: 'include/scrapyfurto/dados_2020_5.csv', content: 'Conteúdo do arquivo 5' },
+                { name: 'include/scrapyfurto/dados_2020_6.csv', content: 'Conteúdo do arquivo 6' },       
+                { name: 'include/scrapyfurto/dados_2020_7.csv', content: 'Conteúdo do arquivo 7' },
+                { name: 'include/scrapyfurto/dados_2020_8.csv', content: 'Conteúdo do arquivo 8' },
+                { name: 'include/scrapyfurto/dados_2020_9.csv', content: 'Conteúdo do arquivo 9' },
+                { name: 'include/scrapyfurto/dados_2020_10.csv', content: 'Conteúdo do arquivo 10' },
+                { name: 'include/scrapyfurto/dados_2020_11.csv', content: 'Conteúdo do arquivo 11' },
+                { name: 'include/scrapyfurto/dados_2020_12.csv', content: 'Conteúdo do arquivo 12' }            
+                // Adicione mais arquivos conforme necessário
+            ];
+
+            fileContents.forEach(function(file) {
+                zip.file(file.name, file.content);
+            });
+
+            zip.generateAsync({ type: 'blob' }).then(function(blob) {
+                saveAs(blob, 'dados_furtos_de_todos_os_meses_de_2020.zip');
+            });
+        }
+    </script>
+
+     <script>
+        function downloadAll2() {
+            var zip = new JSZip();
+
+            // Adicione aqui os conteúdos dos arquivos que você deseja baixar
+            var fileContents = [
+                { name: 'include/scrapyfurto/dados_2021_1.csv', content: 'Conteúdo do arquivo 1' },
+                { name: 'include/scrapyfurto/dados_2021_2.csv', content: 'Conteúdo do arquivo 2' },
+                { name: 'include/scrapyfurto/dados_2021_3.csv', content: 'Conteúdo do arquivo 3' },
+                { name: 'include/scrapyfurto/dados_2021_4.csv', content: 'Conteúdo do arquivo 4' },
+                { name: 'include/scrapyfurto/dados_2021_5.csv', content: 'Conteúdo do arquivo 5' },
+                { name: 'include/scrapyfurto/dados_2021_6.csv', content: 'Conteúdo do arquivo 6' },       
+                { name: 'include/scrapyfurto/dados_2021_7.csv', content: 'Conteúdo do arquivo 7' },
+                { name: 'include/scrapyfurto/dados_2021_8.csv', content: 'Conteúdo do arquivo 8' },
+                { name: 'include/scrapyfurto/dados_2021_9.csv', content: 'Conteúdo do arquivo 9' },
+                { name: 'include/scrapyfurto/dados_2021_10.csv', content: 'Conteúdo do arquivo 10' },
+                { name: 'include/scrapyfurto/dados_2021_11.csv', content: 'Conteúdo do arquivo 11' },
+                { name: 'include/scrapyfurto/dados_2021_12.csv', content: 'Conteúdo do arquivo 12' }            
+                // Adicione mais arquivos conforme necessário
+            ];
+
+            fileContents.forEach(function(file) {
+                zip.file(file.name, file.content);
+            });
+
+            zip.generateAsync({ type: 'blob' }).then(function(blob) {
+                saveAs(blob, 'dados_furtos_de_todos_os_meses_de_2021.zip');
+            });
+        }
+    </script>
+
+
+     <script>
+        function downloadAll3() {
+            var zip = new JSZip();
+
+            // Adicione aqui os conteúdos dos arquivos que você deseja baixar
+            var fileContents = [
+                { name: 'include/scrapyfurto/dados_2022_1.csv', content: 'Conteúdo do arquivo 1' },
+                { name: 'include/scrapyfurto/dados_2022_2.csv', content: 'Conteúdo do arquivo 2' },
+                { name: 'include/scrapyfurto/dados_2022_3.csv', content: 'Conteúdo do arquivo 3' },
+                { name: 'include/scrapyfurto/dados_2022_4.csv', content: 'Conteúdo do arquivo 4' },
+                { name: 'include/scrapyfurto/dados_2022_5.csv', content: 'Conteúdo do arquivo 5' },
+                { name: 'include/scrapyfurto/dados_2022_6.csv', content: 'Conteúdo do arquivo 6' },       
+                { name: 'include/scrapyfurto/dados_2022_7.csv', content: 'Conteúdo do arquivo 7' },
+                { name: 'include/scrapyfurto/dados_2022_8.csv', content: 'Conteúdo do arquivo 8' },
+                { name: 'include/scrapyfurto/dados_2022_9.csv', content: 'Conteúdo do arquivo 9' },
+                { name: 'include/scrapyfurto/dados_2022_10.csv', content: 'Conteúdo do arquivo 10' },
+                { name: 'include/scrapyfurto/dados_2022_11.csv', content: 'Conteúdo do arquivo 11' },
+                { name: 'include/scrapyfurto/dados_2022_12.csv', content: 'Conteúdo do arquivo 12' }            
+                // Adicione mais arquivos conforme necessário
+            ];
+
+            fileContents.forEach(function(file) {
+                zip.file(file.name, file.content);
+            });
+
+            zip.generateAsync({ type: 'blob' }).then(function(blob) {
+                saveAs(blob, 'dados_furtos_de_todos_os_meses_de_2022.zip');
+            });
+        }
+    </script>
 </body>
 </html>

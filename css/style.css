@@ -19,6 +19,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+
 }
 
 .aps {
@@ -80,19 +81,31 @@ select {
   margin: 10px 0;
 }
 
-button {
-  background-color: #3498db;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 60px;
-  cursor: pointer;
+.download{
+text-align: center;
+padding: 20px 20px !important;
+
 }
 
-button:hover {
-  background-color: #e74c3c;
-}
+.download-button {
+            padding-bottom: 15px;
+            padding-top: 15px;
+            padding-left: 220px;
+            padding-right: 220px;
+            font-size: 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 8px;
+            background-color: #343a40;
+            color: #ffffff;
+            border: 2px solid #fff;
+            transition: background-color 0.3s;
+        }
 
+        .download-button:hover {
+            background-color: #45a049;
+        }
 .carousel-container {
   overflow: hidden;
   align-items: center;
@@ -390,3 +403,68 @@ html {
   vertical-align: middle;
   margin-left: 20px; /* Espaço entre a imagem e o texto */
 }
+
+
+    .slideshow-container {
+      max-width: 100%;
+      position: relative;
+      margin: auto;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    .banner {
+      width: 100%;
+    }
+
+     #download-status {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .container-dados {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        .box {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 250px;
+            width: 100%;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .dados-h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .dados-p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .download-button-dados {
+            display: inline-block;
+            padding: 12px 20px;
+            font-size: 18px;
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: #fff;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .download-button-dados:hover {
+            background-color: #45a049;
+        }
