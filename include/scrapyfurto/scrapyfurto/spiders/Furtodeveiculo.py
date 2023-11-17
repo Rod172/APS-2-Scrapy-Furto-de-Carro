@@ -16,7 +16,7 @@ class FurtodeveiculoSpider(scrapy.Spider):
     def __init__(self, *args, **kwargs):
         super(FurtodeveiculoSpider, self).__init__(*args, **kwargs)
         options = Options()
-        options.add_argument("headless")  # Executar o Edge em modo headless para não exibir a interface gráfica
+        # options.add_argument("headless")  # Executar o Edge em modo headless para não exibir a interface gráfica
         self.driver = webdriver.Edge(options=options)
 
     def parse(self, response):
@@ -38,7 +38,7 @@ class FurtodeveiculoSpider(scrapy.Spider):
         # Loop pelos anos e meses
         for ano in anos:
             for mes in meses:
-                if f"dados_{ano}_{mes}.csv":
+                if os.path.isfile(f"dados_{ano}_{mes}.csv"):
                     pass
                 else:
                     # Selecionar o ano

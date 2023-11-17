@@ -456,6 +456,7 @@ html {
 
         .download-button-dados {
             display: inline-block;
+            cursor: pointer;
             padding: 12px 20px;
             font-size: 18px;
             text-decoration: none;

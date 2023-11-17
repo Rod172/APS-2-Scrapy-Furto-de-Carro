@@ -136,27 +136,12 @@
 
     <div class="container-dados">
         <div class="box">
-            <h1>Dados de 2020</h1>
-            <p>Descubra as incríveis histórias por trás dos números de 2020!</p>
-            <a href="#" class="download-button-dados" onclick="downloadAll()" >📥 Baixar Dados</a>
-            <p id="download-status">Baixando...</p>
-        </div>
-
-        <div class="box">
-            <h1>Dados de 2021</h1>
-            <p>Descubra as incríveis histórias por trás dos números de 2021!</p>
-            <a href="#" class="download-button-dados" onclick="downloadAll2()">📥 Baixar Dados</a>
-            <p id="download-status">Baixando...</p>
-        </div>
-
-        <div class="box">
-            <h1>Dados de 2022</h1>
-            <p>Descubra as incríveis histórias por trás dos números de 2022!</p>
-            <a href="#" class="download-button-dados" onclick="downloadAll3()">📥 Baixar Dados</a>
+            <h1>Dados de Furto</h1>
+            <p>Descubra as incríveis histórias por trás dos números de 2020,2021 e 2022!</p>
+            <a class="download-button-dados" id="startScrapy">📥 Baixar Dados</a>
             <p id="download-status">Baixando...</p>
         </div>
     </div>
-
   <!-- Footer -->
   <footer class="text-center text-lg-start bg-dark text-white">
     <!-- Section: Social media -->
@@ -481,7 +466,7 @@ function downloadFiles() {
         }
     </script>-->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 
     <script>
@@ -576,6 +561,21 @@ function downloadFiles() {
                 saveAs(blob, 'dados_furtos_de_todos_os_meses_de_2022.zip');
             });
         }
+    </script> -->
+
+    <script>
+      document.getElementById('startScrapy').addEventListener('click', function() {
+          // Faça uma solicitação ao servidor Flask quando o botão for clicado
+          fetch('http://127.0.0.1:5000/start_scrapy', {
+              method: 'POST',
+              mode: 'cors',
+              credentials: 'include'
+          })
+          .then(response => response.text())
+          .then(message => alert(message))
+          .catch(error => console.error(error));
+      });
+      
     </script>
-</body>
+  </body>
 </html>
