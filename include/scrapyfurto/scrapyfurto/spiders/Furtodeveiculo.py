@@ -61,16 +61,8 @@ class FurtodeveiculoSpider(scrapy.Spider):
                     xls_filename = pd.read_csv(xls_filename_path, encoding='UTF-16-le', sep='\t', skipinitialspace=bool, dtype=str)
                     csv_filename = f"dados_{ano}_{mes}.csv"
 
-                    # Aguarde o arquivo ser baixado completamente (ajuste conforme necessário)
-
-                    # # Renomear o arquivo XLS baixado para incluir ano e mês no nome
-                    # new_xls_filename = f"dados_{ano}_{mes}.xls"
-                    # os.rename(xls_filename, new_xls_filename)
-
                     # Converter XLS para CSV usando pandas
                     xls_filename.to_csv(csv_filename, index=False)
-                    # csv_data = pd.read_csv(csv_filename, sep='/t')#, engine="xlrd"
-                    # csv_data.to_csv(csv_filename, index=False)
 
                     # Limpar o arquivo XLS após a conversão
                     os.remove(xls_filename_path)
